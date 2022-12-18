@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/seipan/Go-Authentic/tree/main/JWT/handler"
 )
 
 type post struct {
@@ -18,6 +19,7 @@ func main() {
 	r := mux.NewRouter()
 	// localhost:8080/publicでpublicハンドラーを実行
 	r.Handle("/public", public)
+	r.Handle("/auth", handler.GetTokenHandler)
 
 	//サーバー起動
 	if err := http.ListenAndServe(":8080", r); err != nil {
