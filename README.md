@@ -5,4 +5,4 @@ Go で認証方法をまとめる予定
 * Session
 * JWT
 * oauth2.0
-ぐらいの予定
+あと、oauth2.0のみ
